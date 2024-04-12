@@ -21,6 +21,3 @@ for index, row in df_ecommerce_sample.iterrows():
         
     producer.send(topic, json.dumps(data).encode('utf-8'))
     time.sleep(0.1)
-
-
-    curl -XPUT -u 'master-user:master-user-password' 'domain-endpoint/movies/_doc/1' -d '{"director": "Burton, Tim", "genre": ["Comedy","Sci-Fi"], "year": 1996, "actor": ["Jack Nicholson","Pierce Brosnan","Sarah Jessica Parker"], "title": "Mars Attacks!"}' -H 'Content-Type: application/json'
